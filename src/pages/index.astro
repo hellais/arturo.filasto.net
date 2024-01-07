@@ -1,5 +1,5 @@
 ---
-
+import { Content as HomePage } from "../content/index.md";
 ---
 
 <html lang="en">
@@ -8,27 +8,80 @@
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="generator" content="r2" />
     <style>
+      :root {
+        --bg-color: rgb(30, 15, 13);
+      }
       body {
         margin: 0;
-        background-color: rgb(30, 15, 13);
+        background-color: var(--bg-color);
       }
-      canvas {
-        width: 100%;
-        height: 500px;
+      .hero-bg {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+      }
+      .vignette {
+        border-radius: 30%;
+        display: inline-block;
+        position: relative;
+        background-color: var(--bg-color);
+      }
+      .vignette canvas {
+        border-radius: 30%;
         display: block;
+        border: 1px solid var(--bg-color);
+      }
+      .vignette:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow:
+          inset 10px 24px 40px 0px var(--bg-color),
+          inset -10px -24px 40px 0px var(--bg-color),
+          inset 20px -10px 40px 0px var(--bg-color),
+          inset -20px 10px 40px 0px var(--bg-color);
+      }
+      .hero-text {
+        /* color: #e50d0e; */
+        color: #feedc4;
+        position: relative;
+        z-index: 999999;
       }
     </style>
   </head>
   <body>
-    <canvas id="trippyCanvas"></canvas>
+    <div class="text-center py-64">
+      <h1 class="text-6xl font-bold hero-text"></h1>
+    </div>
+    <div class="hero-bg">
+      <div class="vignette">
+        <div class="flex justify-center">
+          <canvas
+            id="mainCanvas"
+            style="width: 100%;height: 500px;display: block;"></canvas>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative w-full px-6 py-12 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28"
+    >
+      <article class="prose lg:prose-xl prose-invert">
+        <HomePage />
+      </article>
+    </div>
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function () {
-        const canvas = document.getElementById("trippyCanvas");
+        const canvas = document.getElementById("mainCanvas");
         const ctx = canvas.getContext("2d");
         canvas.width = window.innerWidth;
-        //canvas.height = window.innerHeight;
         canvas.height = 500;
         let mouseX = window.innerWidth / 2;
         let mouseY = window.innerHeight / 2;
@@ -42,12 +95,6 @@
         ("rgb(82, 22, 17)"); // maroon hsl(5, 66, 19)
         //"rgb(57, 255, 20)",
         //"rgb(229, 228, 226)",
-
-        let colors2 = [
-          "rgb(71, 74, 81)",
-          "rgb(255, 165, 0)",
-          "rgb(0, 128, 128)",
-        ];
 
         let offsetX = 0;
         let offsetY = 0;
@@ -118,16 +165,10 @@
         }
 
         function animateGradient() {
-          r0 = 100 * 2 + 100 * Math.sin(t * 0.002);
-          r1 = 300 * 2 + 200 * Math.cos(t * 0.002);
-          let gradient = ctx.createRadialGradient(
-            mouseX,
-            mouseY,
-            r0,
-            mouseX,
-            mouseY,
-            r1
-          );
+          const r0 = 10 * 2 + 10 * Math.sin(t * 0.002);
+          const r1 = 50 * 2 + 50 * Math.cos(t * 0.002);
+          const y = Math.min(mouseY - 150, 500);
+          let gradient = ctx.createRadialGradient(mouseX, y, r0, mouseX, y, r1);
           gradient.addColorStop(0, `hsl(42, 97%, 88%)`);
           gradient.addColorStop(0.8, `hsl(5, 66%, 19%)`);
           gradient.addColorStop(1, `hsl(7, 40%, 8%)`);
@@ -171,8 +212,6 @@
         let lsb = 6;
         let lsd = Math.PI / 2;
 
-        let r0 = 100;
-        let r1 = 500;
         let t = 0;
         let textScale = 1;
         const animatedText = "Arturo Filastò";
