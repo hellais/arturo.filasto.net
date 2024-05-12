@@ -8,7 +8,7 @@ I would like to use this post to announce the fact I'm planning to get back
 into the blogging game, but also use it as an opportunity to explain something
 deeper about the direction I think the web is going today.
 
-I'm working on a new project that I think will help make the internet a better
+I'm working on a new project that I think will help make the internet better
 and I think documenting that process here will be quite interesting. That's
 however for another day.
 
