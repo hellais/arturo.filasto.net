@@ -18,7 +18,7 @@ The latest snapshot visible from the internet archive is from 2008 and you
 can still read the embarassing words of a teenager, yet all the images are broken.
 Even though that site has disappeared from the face of the internet (the domain
 is an NXDOMAIN), the Internet Archive took a snapshot of it. What they were able
-to effectively store and keep was just the text, so even though probably digging 
+to effectively store and keep was just the text. Even though probably digging
 a fully encrypted hard drive of which I have forgotten the password I might have found 
 the original dump of the site, I don't have to.
 
