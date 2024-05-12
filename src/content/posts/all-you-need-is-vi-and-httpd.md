@@ -1,3 +1,9 @@
+---
+title: All you need is a text editor and a web server
+publishDate: 12 May 2024
+description: Technology is distracting us from content.
+---
+
 I would like to use this post to announce the fact I'm planning to get back
 into the blogging game, but also use it as an opportunity to explain something
 deeper about the direction I think the web is going today.
