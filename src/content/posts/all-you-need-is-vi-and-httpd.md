@@ -78,7 +78,7 @@ didn't even think you needed.
 
 What happened to the times when we used to send each other lengthly emails and
 we left those sitting in our inbox for weeks until we had the time to share a
-thoughtful and throrough reply?
+thoughtful and thorough reply?
 
 The point I'm making here is that opting for a fast-paced way of interacting
 online is a choice we make, but we can also make the opposite choice.
@@ -101,15 +101,15 @@ cryptography) movement? Those of you who rememeber those days hanging out in
 IRC channels on OFTC and sending each other messages that would be answered
 days later know what I'm talking about. Those of you still living in this
 consumerist world without a smartphone, I tip my hat to you.
-Those of you that still believe in the [dream of the cypherpunks](https://en.wikipedia.org/wiki/Cypherpunk) I am all in.
+Those of you that still believe in the [dream of the cypherpunks](https://en.wikipedia.org/wiki/Cypherpunk) I understand where you are coming from.
 
 During these days I explored this concept through a project which was the
 original implementation of `arturo.filasto.net`, called
 [latenza.js](https://github.com/hellais/latenza.js).
 
-I also though feel as a community we need to recognize the fact that we [don't
+I also feel that as a community we need to recognize the fact that we [don't
 live in the 90s anymore](https://www.youtube.com/watch?v=TZt-pOc3moc) and we
-can't expect all these new internet users to understand that.
+can't expect all these new internet users to not want nice things.
 
 
 
