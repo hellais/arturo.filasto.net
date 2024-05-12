@@ -103,9 +103,15 @@ days later know what I'm talking about. Those of you still living in this
 consumerist world without a smartphone, I tip my hat to you.
 Those of you that still believe in the [dream of the cypherpunks](https://en.wikipedia.org/wiki/Cypherpunk) I am all in.
 
+During these days I explored this concept through a project which was the
+original implementation of `arturo.filasto.net`, called
+[latenza.js](https://github.com/hellais/latenza.js).
+
 I also though feel as a community we need to recognize the fact that we [don't
 live in the 90s anymore](https://www.youtube.com/watch?v=TZt-pOc3moc) and we
 can't expect all these new internet users to understand that.
+
+
 
 I will end it here with what I meant in the title. Back in 2011 all you needed
 was just a text editor (hopefully vi) and a web server (make your pick) to start
@@ -114,7 +120,7 @@ My arguement is that still today, fundamentally that's all you need. It's
 actually never been easier than before to run a static website. Just pick one of the many
 free static site hosting services.
 So why is it that we are investing so much time and energy and [thought](https://en.wikipedia.org/wiki/ActivityPub) and
-[code](https://en.wikipedia.org/wiki/Diaspora_(social_network), in building even more complicated tech stacks like the [fediverse](https://en.wikipedia.org/wiki/Mattermost)?
+[code](https://en.wikipedia.org/wiki/Diaspora_\(social_network), in building even more complicated tech stacks like the [fediverse](https://en.wikipedia.org/wiki/Mattermost)?
 Why aren't we happy with what we have?
 
 I'm of the idea that on the tools are just instruments to do what you want to
