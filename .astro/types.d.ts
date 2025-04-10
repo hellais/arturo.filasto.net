@@ -184,16 +184,7 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"posts": {
-"all-you-need-is-vi-and-httpd.md": {
-	id: "all-you-need-is-vi-and-httpd.md";
-  slug: "all-you-need-is-vi-and-httpd";
-  body: string;
-  collection: "posts";
-  data: any
-} & { render(): Render[".md"] };
-};
-
+		
 	};
 
 	type DataEntryMap = {
