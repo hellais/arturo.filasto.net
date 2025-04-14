@@ -5,9 +5,13 @@ const title = 'Blog';
 const description = 'Latest articles.';
 const permalink = `${Astro.site.href}blog`;
 
-//let allPosts = await Astro.glob('../../content/posts/*.md');
-//allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 let allPosts = []
+try {
+    allPosts = await Astro.glob('../../content/posts/*.md');
+    allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+} catch (error) {
+    console.log(`error listing posts ${error}`)
+}
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="blog">
